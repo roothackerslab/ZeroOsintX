@@ -213,10 +213,8 @@ MIT License - See [LICENSE](LICENSE) file
 
 **ZeroTraceX (Ahsan Mughal)**
 - GitHub: [@roothackerslab](https://github.com/roothackerslab)
-- Email: roothackerslab@example.com
+- Email: roothackerslab.git@example.com
 
-**Roothackerslab Community**
-- Website: https://roothackerslab.com
 
 ---
 
@@ -237,6 +235,6 @@ Built with:
 
 **Use responsibly. Happy researching!**
 
-Made with ❤️ by [ZeroTraceX](https://github.com/roothackerslab) | [Roothackerslab](https://roothackerslab.com)
+Made with ❤️ by [ZeroTraceX](https://github.com/roothackerslab)
 
 </div>
