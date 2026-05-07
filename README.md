@@ -9,7 +9,7 @@
 
 **Professional OSINT & Reconnaissance Framework**
 
-*Developed by ZeroTraceX (Ahsan Mughal) | Powered by Roothackerslab*
+*Developed by Mughal__Hacker (Ahsan Mughal) | Powered by Roothackerslab*
 
 </div>
 
