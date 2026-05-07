@@ -64,7 +64,7 @@ def show_banner():
     console.print("[bold cyan]" + "="*85 + "[/bold cyan]")
     console.print("[bold white]    🎯 Intelligence Gathering  |  🌍 Geolocation  |  🔐 Security Research[/bold white]")
     console.print("[bold cyan]" + "="*85 + "[/bold cyan]")
-    console.print("[bold magenta]         Powered by 🏠 Roothackerslab | Developed by ZeroTraceX [AhsanMughal][/bold magenta]")
+    console.print("[bold magenta]         Powered by 🏠 Roothackerslab | Developed by Mughal__Hacker [AhsanMughal][/bold magenta]")
     console.print("[bold cyan]" + "="*85 + "[/bold cyan]\n")
 
 
@@ -1419,7 +1419,7 @@ def main():
         elif choice == "0":
             console.print("\n[bold green]👋 Thanks for using ZeroOsintX![/bold green]")
             console.print("[cyan]Powered by 🏠 Roothackerslab Community[/cyan]")
-            console.print("[cyan]Developed by ZeroTraceX [AhsanMughal][/cyan]\n")
+            console.print("[cyan]Developed by Mughal__Hacker [AhsanMughal][/cyan]\n")
             sys.exit(0)
         
         else:
