@@ -235,6 +235,6 @@ Built with:
 
 **Use responsibly. Happy researching!**
 
-Made with ❤️ by [ZeroTraceX](https://github.com/roothackerslab)
+Made with ❤️ by [Mughal__hacker](https://github.com/roothackerslab)
 
 </div>
