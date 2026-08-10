@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZeroOSINTx // dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Chakra+Petch:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="scanlines" aria-hidden="true"></div>
+<div class="boot-overlay" id="boot-overlay" aria-hidden="true">
+  <div class="boot-logo">ZeroOsintX</div>
+  <div class="boot-credit">developed by <strong>mughal__hacker</strong></div>
+  <div class="boot-powered">powered by <strong>RootHackersLab</strong></div>
+  <pre class="boot-sub">booting subsystems: recon · infra · threat-intel · realtime
+establishing session…</pre>
+</div>
+
+<div class="shell">
+
+  <aside class="rail">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name">ZeroOSINTx</span>
+      <span class="brand-ver">v2.0</span>
+    </div>
+    <div class="brand-credit">by <strong>Mughal_hacker</strong> · roothackerslab</div>
+
+    <nav class="modnav" id="modnav">
+      <div class="modnav-group">overview</div>
+      <button class="modbtn" data-mod="live-dashboard">live dashboard</button>
+      <button class="modbtn" data-mod="attack-map">attack map</button>
+      <button class="modbtn" data-mod="radar">radar</button>
+
+      <div class="modnav-group">recon</div>
+      <button class="modbtn active" data-mod="username">username</button>
+      <button class="modbtn" data-mod="email">email</button>
+      <button class="modbtn" data-mod="phone">phone</button>
+
+      <div class="modnav-group">infrastructure</div>
+      <button class="modbtn" data-mod="webscan">web scan</button>
+      <button class="modbtn" data-mod="domain">domain</button>
+      <button class="modbtn" data-mod="ip">ip address</button>
+      <button class="modbtn" data-mod="techstack">tech stack</button>
+
+      <div class="modnav-group">place</div>
+      <button class="modbtn" data-mod="geo">geo scan</button>
+
+      <div class="modnav-group">threat intel</div>
+      <button class="modbtn" data-mod="threat">live feed</button>
+
+      <div class="modnav-group">fun</div>
+      <button class="modbtn" data-mod="fun">realtime</button>
+
+      <div class="modnav-group">tools</div>
+      <button class="modbtn" data-mod="hash-id">hash identify</button>
+      <button class="modbtn" data-mod="hash-reputation">hash reputation</button>
+      <button class="modbtn" data-mod="mac-vendor">mac vendor</button>
+      <button class="modbtn" data-mod="url-reputation">url reputation</button>
+      <button class="modbtn" data-mod="dorks">dork generator</button>
+      <button class="modbtn" data-mod="exif">exif metadata</button>
+    </nav>
+
+    <div class="rail-foot">
+      <div class="status-dot"></div> <span id="health-label">checking backend…</span>
+      <button class="settings-btn" id="settings-btn" title="API keys">⚙</button>
+    </div>
+  </aside>
+
+  <div class="modal-overlay" id="settings-overlay" hidden>
+    <div class="modal">
+      <div class="modal-head">
+        <span>API keys</span>
+        <button class="modal-close" id="settings-close">✕</button>
+      </div>
+      <p class="modal-note">All optional — every module works without a key and just skips that lookup. Keys are saved locally to <code>instance/api_keys.local.json</code> (never sent anywhere except the API itself, never committed to git).</p>
+      <div class="modal-body" id="settings-list">
+        <div class="empty-state"><pre>loading…</pre></div>
+      </div>
+    </div>
+  </div>
+
+  <main class="stage">
+    <header class="stage-head">
+      <div>
+        <div class="eyebrow" id="mod-eyebrow">recon / username</div>
+        <h1 id="mod-title">Username existence check</h1>
+        <p class="mod-desc" id="mod-desc">Checks whether a handle resolves across 30 platforms. Presence only — no bio/follower scraping.</p>
+      </div>
+      <div class="hud-readout">
+        <span class="hud-dot"></span>
+        <span id="hud-clock">00:00:00</span>
+        <span class="hud-sep">UTC</span>
+      </div>
+    </header>
+
+    <form class="query-bar" id="query-form">
+      <span class="prompt">$</span>
+      <input type="text" id="query-input" placeholder="mughal__hacker" autocomplete="off" spellcheck="false">
+      <input type="number" id="birth-year-input" placeholder="birth year (optional)" min="1900" max="2026" hidden>
+      <button type="submit" id="run-btn">run</button>
+    </form>
+
+    <form class="query-bar" id="file-form" hidden>
+      <span class="prompt">$</span>
+      <input type="file" id="file-input" accept="image/*">
+      <button type="submit" id="file-run-btn">read metadata</button>
+    </form>
+
+    <section class="results" id="results">
+      <div class="empty-state">
+        <pre>┌──────────────────────────────┐
+│  awaiting target...           │
+└──────────────────────────────┘</pre>
+      </div>
+    </section>
+
+    <section class="export-bar" id="export-bar" hidden>
+      <span>export:</span>
+      <button data-fmt="html">html</button>
+      <button data-fmt="json">json</button>
+      <button data-fmt="csv">csv</button>
+      <button data-fmt="markdown">md</button>
+      <span id="export-status"></span>
+    </section>
+  </main>
+
+  <aside class="console" id="console">
+    <div class="console-head">activity log</div>
+    <div class="console-body" id="console-body"></div>
+  </aside>
+
+</div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
