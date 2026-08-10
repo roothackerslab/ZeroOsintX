@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 Roothackerslab
+Copyright (c) 2026 ZeroOSINTx (developed by Mughal_hacker)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +19,11 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+Note: This tool queries publicly available data through free, public APIs.
+Users are solely responsible for ensuring their use of this tool complies
+with applicable laws and the terms of service of any queried platform.
+This tool is intended for authorized security research, personal OSINT
+hygiene checks, and educational purposes only.

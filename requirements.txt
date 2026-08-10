@@ -1,0 +1,8 @@
+flask>=3.0
+requests>=2.31
+dnspython>=2.6
+phonenumbers>=8.13
+python-whois>=0.9
+python-dateutil>=2.8
+websocket-client>=1.7
+Pillow>=10.0
